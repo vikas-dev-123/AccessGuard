@@ -79,7 +79,12 @@ All three services (frontend, backend, postgres) run together via Docker Compose
 AccessGuard/
 ├── backend/
 │   ├── app/
+│   │   ├── api/             # FastAPI routers: auth, uploads, reviews
+│   │   ├── services/        # Upload validation/ingest, review execution and queries
 │   │   ├── checks/          # One module per audit check, auto-registered via @register_check
+│   │   ├── main.py          # FastAPI app entrypoint
+│   │   ├── models.py        # SQLAlchemy models (users, datasets, reviews, findings)
+│   │   ├── auth.py          # JWT + bcrypt, role-based dependencies
 │   │   ├── config.py        # ReviewConfig: thresholds, privileged roles, generic patterns, SoD rules
 │   │   ├── data_loading.py  # CSV reading, column validation, normalization
 │   │   ├── review.py        # Runs all checks, assigns finding IDs, builds summaries
@@ -91,8 +96,8 @@ AccessGuard/
 │   ├── config/
 │   │   └── sod_rules.json   # Configurable Segregation-of-Duties rules
 │   └── requirements.txt
-├── frontend/                # React + Tailwind app — added in later phases
-├── docker-compose.yml       # Added once backend/frontend are containerized
+├── frontend/                # React + Tailwind app — added in Phase 4
+├── docker-compose.yml       # Postgres + backend (frontend added in Phase 4)
 └── README.md
 ```
 
@@ -108,7 +113,22 @@ AccessGuard/
 
 ## Setup
 
-> Full Docker setup instructions will be added once the backend, frontend, and Postgres services are complete. For now, Phase 1 (synthetic data generation) can be run standalone:
+### Run with Docker (backend + PostgreSQL)
+
+```bash
+docker compose up -d --build
+```
+
+The API is at http://localhost:8000, with interactive docs at http://localhost:8000/docs. Two demo users are created on startup:
+
+| Username | Password | Role | Can |
+|----------|----------|------|-----|
+| `auditor` | `Auditor@123` | Auditor | Upload files, run reviews, view everything |
+| `viewer` | `Viewer@123` | Viewer | View reviews, findings, and summaries only |
+
+Override these, plus `JWT_SECRET` and `POSTGRES_PASSWORD`, with environment variables for anything beyond a local demo.
+
+### Run locally (without Docker)
 
 ```bash
 cd backend
@@ -122,7 +142,13 @@ This produces `hr_employees.csv`, `core_banking_users.csv`, `loan_system_users.c
 
 System CSV columns: `user_id, employee_id, username, role, account_status, created_date, last_login_date, status_last_updated`. `status_last_updated` records when the account status last changed, and is what the late-revocation check uses to measure how long after termination an account was disabled.
 
-Run all audit checks against that data and the test suite:
+Start the API locally. Without `DATABASE_URL` it uses a SQLite file, `backend/accessguard.db`:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Or run all audit checks straight from the terminal, and run the test suite:
 
 ```bash
 python -m app.cli --as-of 2026-09-27   # prints summary; writes output/findings.csv
@@ -135,11 +161,33 @@ pytest
 
 Create a module in `backend/app/checks/`, decorate a function `(ReviewContext) -> list[Finding]` with `@register_check(...)`, and supply its criteria, impact, and recommendation text (used in the audit report). Then import the module in `app/checks/__init__.py`. The runner, summary, API, and reports pick it up automatically.
 
-Once all phases are complete, the full stack will run with:
+## API
 
-```bash
-docker-compose up
+All endpoints except `/auth/login` and `/health` require `Authorization: Bearer <token>`.
+
+| Method | Endpoint | Role | Purpose |
+|--------|----------|------|---------|
+| POST | `/auth/login` | - | Form login (`username`, `password`), returns a JWT |
+| GET | `/auth/me` | any | Current user |
+| POST | `/upload` | Auditor | Multipart: `hr_file` (required) plus at least one of `core_banking_file`, `loan_system_file`, `database_file` |
+| GET | `/datasets` | any | Uploaded datasets, newest first |
+| GET | `/checks` | any | Check catalogue: code, name, criteria, impact, recommendation |
+| POST | `/reviews/run` | Auditor | JSON `{"dataset_id"?, "as_of_date"?}`. Defaults to the latest dataset and today |
+| GET | `/reviews` / `/reviews/{id}` | any | Review metadata |
+| GET | `/reviews/{id}/findings` | any | Filters: `system`, `check` (code), `risk_rating`, `search`; paging: `limit`, `offset` |
+| GET | `/reviews/{id}/summary` | any | Counts by risk, check, and system |
+| GET | `/reviews/{id}/report/excel`, `/report/pdf` | any | Added in Phase 5 |
+
+Uploads are validated before anything is stored. A rejected upload returns `422` and lists every problem in every file at once, with file names and row numbers, for example:
+
+```json
+{"detail": {"message": "Upload rejected: 2 problem(s) found.", "errors": [
+  {"file": "hr_employees.csv", "error": "'status' must be Active or Terminated at row 4."},
+  {"file": "loan_system_users.csv", "error": "Missing required column(s): role. Expected columns: ..."}
+]}}
 ```
+
+Checks: `.csv` extension, UTF-8 encoding, 10 MB limit, required columns, at least one data row, no blank key fields, unique `employee_id`/`user_id`, `YYYY-MM-DD` dates, HR status of `Active` or `Terminated`, and a termination date for every terminated employee.
 
 ## Screenshots
 
@@ -149,7 +197,7 @@ _Screenshots of the dashboard, findings table, and generated reports will be add
 
 - [x] Phase 1 — Dummy data generator
 - [x] Phase 2 — Audit checks (core logic) + unit tests
-- [ ] Phase 3 — Backend API (FastAPI + JWT auth)
+- [x] Phase 3 — Backend API (FastAPI + JWT auth + PostgreSQL)
 - [ ] Phase 4 — Frontend (React dashboard)
 - [ ] Phase 5 — Audit report generation (Excel + PDF)
 - [ ] Phase 6 — Full test suite, polish, Docker Compose
