@@ -3,6 +3,7 @@ import os
 # Must be set before app.db is imported, since the engine is created at import time.
 os.environ["DATABASE_URL"] = "sqlite://"
 os.environ["JWT_SECRET"] = "test-secret"
+os.environ["BCRYPT_ROUNDS"] = "4"
 
 import pytest  # noqa: E402
 from fastapi.testclient import TestClient  # noqa: E402

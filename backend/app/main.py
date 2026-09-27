@@ -1,3 +1,4 @@
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -7,11 +8,15 @@ from app import models  # noqa: F401  (registers tables on Base.metadata)
 from app.api import auth, reviews, uploads
 from app.auth import seed_default_users
 from app.db import Base, SessionLocal, engine
-from app.settings import settings
+from app.settings import DEFAULT_JWT_SECRET, settings
+
+logger = logging.getLogger("accessguard")
 
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
+    if settings.jwt_secret == DEFAULT_JWT_SECRET:
+        logger.warning("JWT_SECRET is not set; using an insecure development default.")
     Base.metadata.create_all(engine)
     with SessionLocal() as db:
         seed_default_users(db)

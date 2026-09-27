@@ -2,15 +2,11 @@
 Generates synthetic HR + banking-system user data for "Apex Bank" (a fictional
 bank) so that AccessGuard's audit checks have realistic data to run against.
 
-Produces, in backend/data/:
-    hr_employees.csv
-    core_banking_users.csv
-    loan_system_users.csv
-    database_users.csv
+Produces hr_employees.csv, core_banking_users.csv, loan_system_users.csv and
+database_users.csv in backend/data/ (or --output-dir).
 
 Every run is deterministic (seeded) and deliberately plants 15-25 exceptions
-of each type the Phase 2 audit checks look for. See the EXCEPTION SUMMARY
-printed at the end of the run for exact counts.
+of each type the audit checks look for; the counts are printed at the end.
 
 Note on schema: alongside the columns requested in the spec
 (user_id, employee_id, username, role, account_status, created_date,
@@ -19,6 +15,7 @@ column. It records when `account_status` last changed, which is what the
 "late revocation" check needs to measure how long after termination an
 account was actually disabled.
 """
+import argparse
 import csv
 import json
 import random
@@ -28,9 +25,7 @@ from pathlib import Path
 from faker import Faker
 
 SEED = 42
-random.seed(SEED)
 fake = Faker()
-Faker.seed(SEED)
 
 TODAY = date(2026, 9, 27)
 
@@ -207,8 +202,11 @@ def pick_sample(pool, n, exclude=frozenset()):
     return random.sample(candidates, n)
 
 
-def main():
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
+def main(output_dir: Path = DATA_DIR):
+    random.seed(SEED)
+    Faker.seed(SEED)
+    Account._counters = {}
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     with open(SOD_RULES_PATH) as f:
         sod_rules = json.load(f)["rules"]
@@ -393,16 +391,16 @@ def main():
                 writer.writerow(row)
 
     write_csv(
-        DATA_DIR / "hr_employees.csv",
+        output_dir / "hr_employees.csv",
         [e.to_row() for e in employees],
         ["employee_id", "name", "department", "designation", "status", "joining_date", "termination_date"],
     )
 
     account_fields = ["user_id", "employee_id", "username", "role", "account_status",
                        "created_date", "last_login_date", "status_last_updated"]
-    write_csv(DATA_DIR / "core_banking_users.csv", [a.to_row() for a in core_accounts], account_fields)
-    write_csv(DATA_DIR / "loan_system_users.csv", [a.to_row() for a in loan_accounts], account_fields)
-    write_csv(DATA_DIR / "database_users.csv", [a.to_row() for a in db_accounts], account_fields)
+    write_csv(output_dir / "core_banking_users.csv", [a.to_row() for a in core_accounts], account_fields)
+    write_csv(output_dir / "loan_system_users.csv", [a.to_row() for a in loan_accounts], account_fields)
+    write_csv(output_dir / "database_users.csv", [a.to_row() for a in db_accounts], account_fields)
 
     print(f"Generated {len(employees)} employees "
           f"({len(active_employees)} active, {len(terminated_employees)} terminated)")
@@ -412,8 +410,10 @@ def main():
     print("\nPlanted exceptions:")
     for check, count in exception_counts.items():
         print(f"  {check:30s}: {count}")
-    print(f"\nFiles written to {DATA_DIR}")
+    print(f"\nFiles written to {output_dir}")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Generate synthetic Apex Bank access review data.")
+    parser.add_argument("--output-dir", type=Path, default=DATA_DIR)
+    main(parser.parse_args().output_dir)
