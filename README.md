@@ -96,8 +96,14 @@ AccessGuard/
 │   ├── config/
 │   │   └── sod_rules.json   # Configurable Segregation-of-Duties rules
 │   └── requirements.txt
-├── frontend/                # React + Tailwind app — added in Phase 4
-├── docker-compose.yml       # Postgres + backend (frontend added in Phase 4)
+├── frontend/
+│   ├── src/pages/           # Login, Dashboard, Findings, Upload & run
+│   ├── src/components/      # Stat tiles, bar charts, risk badges, layout
+│   ├── src/api.ts           # Typed API client (JWT in localStorage)
+│   ├── Dockerfile           # Node build -> nginx static server
+│   └── nginx.conf           # SPA routing
+├── docs/screenshots/
+├── docker-compose.yml       # Postgres + backend + frontend
 └── README.md
 ```
 
@@ -113,20 +119,26 @@ AccessGuard/
 
 ## Setup
 
-### Run with Docker (backend + PostgreSQL)
+### Run with Docker (recommended)
 
 ```bash
 docker compose up -d --build
 ```
 
-The API is at http://localhost:8000, with interactive docs at http://localhost:8000/docs. Two demo users are created on startup:
+| Service | URL |
+|---------|-----|
+| Web app | http://localhost:8080 |
+| API + Swagger docs | http://localhost:8000/docs |
+| PostgreSQL | internal to the Compose network |
+
+Sign in, open **Upload & run**, upload the four CSVs from `backend/data/`, set the as-of date to `2026-09-27`, and run the review. Two demo users are created on startup:
 
 | Username | Password | Role | Can |
 |----------|----------|------|-----|
 | `auditor` | `Auditor@123` | Auditor | Upload files, run reviews, view everything |
 | `viewer` | `Viewer@123` | Viewer | View reviews, findings, and summaries only |
 
-Override these, plus `JWT_SECRET` and `POSTGRES_PASSWORD`, with environment variables for anything beyond a local demo.
+Override these, plus `JWT_SECRET` and `POSTGRES_PASSWORD`, with environment variables for anything beyond a local demo. If the API is served from somewhere other than `localhost:8000`, set `VITE_API_URL` (read when the frontend image is built) and `CORS_ORIGINS`.
 
 ### Run locally (without Docker)
 
@@ -146,6 +158,14 @@ Start the API locally. Without `DATABASE_URL` it uses a SQLite file, `backend/ac
 
 ```bash
 uvicorn app.main:app --reload
+```
+
+Run the frontend dev server in a second terminal. It expects the API on `localhost:8000`:
+
+```bash
+cd frontend
+npm install
+npm run dev        # http://localhost:5173
 ```
 
 Or run all audit checks straight from the terminal, and run the test suite:
@@ -191,13 +211,30 @@ Checks: `.csv` extension, UTF-8 encoding, 10 MB limit, required columns, at leas
 
 ## Screenshots
 
-_Screenshots of the dashboard, findings table, and generated reports will be added here once the frontend is built._
+**Dashboard.** Findings by risk, by check, and by system. Every tile and bar links to the matching filtered findings.
+
+![Dashboard](docs/screenshots/dashboard.png)
+
+**Findings.** Server-side filters (risk, check, system), search, and paging. Shown here filtered to SoD conflicts.
+
+![Findings filtered to SoD conflicts](docs/screenshots/findings-sod-filter.png)
+
+**Upload validation.** Every problem in every file is reported at once, before anything is stored.
+
+![Upload validation errors](docs/screenshots/upload-validation.png)
+
+**Dark mode and mobile.** Follows the OS theme; findings become cards on small screens.
+
+<p>
+  <img src="docs/screenshots/dashboard-dark.png" alt="Dashboard in dark mode" width="68%">
+  <img src="docs/screenshots/findings-mobile.png" alt="Findings on mobile" width="28%">
+</p>
 
 ## Build progress
 
 - [x] Phase 1 — Dummy data generator
 - [x] Phase 2 — Audit checks (core logic) + unit tests
 - [x] Phase 3 — Backend API (FastAPI + JWT auth + PostgreSQL)
-- [ ] Phase 4 — Frontend (React dashboard)
+- [x] Phase 4 — Frontend (React + Tailwind dashboard)
 - [ ] Phase 5 — Audit report generation (Excel + PDF)
 - [ ] Phase 6 — Full test suite, polish, Docker Compose

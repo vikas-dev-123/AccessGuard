@@ -15,7 +15,7 @@ class Settings:
     jwt_secret: str = field(default_factory=lambda: _env("JWT_SECRET", "dev-only-insecure-secret"))
     jwt_expire_minutes: int = field(default_factory=lambda: int(_env("JWT_EXPIRE_MINUTES", "480")))
     cors_origins: list[str] = field(default_factory=lambda: [
-        o.strip() for o in _env("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000").split(",") if o.strip()
+        o.strip() for o in _env("CORS_ORIGINS", "http://localhost:5173,http://localhost:8080").split(",") if o.strip()
     ])
     auditor_username: str = field(default_factory=lambda: _env("AUDITOR_USERNAME", "auditor"))
     auditor_password: str = field(default_factory=lambda: _env("AUDITOR_PASSWORD", "Auditor@123"))
