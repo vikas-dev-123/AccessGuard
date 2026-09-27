@@ -7,6 +7,7 @@ NAME = "Privileged access"
 @register_check(
     code="privileged_access",
     name=NAME,
+    condition='active privileged (Admin or DBA) accounts were identified. Accounts held outside the IT department, or with no HR record, are rated High; accounts held by IT staff are listed as Informational for recertification.',
     criteria="Privileged roles (Admin, DBA) must be limited to IT staff whose job requires them, "
              "and must be reviewed regularly.",
     impact="A privileged user can change configuration, security settings, and data directly, which "

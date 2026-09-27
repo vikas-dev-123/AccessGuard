@@ -19,7 +19,7 @@ def test_all_seven_checks_registered_in_order():
         "generic_shared_accounts", "privileged_access", "sod_conflicts", "dormant_accounts",
     ]
     for check in get_checks():
-        assert check.criteria and check.impact and check.recommendation
+        assert check.condition and check.criteria and check.impact and check.recommendation
 
 
 @pytest.fixture

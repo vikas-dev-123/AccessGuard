@@ -7,6 +7,7 @@ NAME = "Late revocation"
 @register_check(
     code="late_revocation",
     name=NAME,
+    condition='accounts of terminated employees were disabled more than one day after the termination date.',
     criteria="Accounts of terminated employees must be disabled within 1 day of the termination date.",
     impact="While revocation is delayed, a departed employee keeps access. Transactions or data "
            "access in that window cannot be prevented and are often never investigated.",

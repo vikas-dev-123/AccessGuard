@@ -196,7 +196,8 @@ All endpoints except `/auth/login` and `/health` require `Authorization: Bearer 
 | GET | `/reviews` / `/reviews/{id}` | any | Review metadata |
 | GET | `/reviews/{id}/findings` | any | Filters: `system`, `check` (code), `risk_rating`, `search`; paging: `limit`, `offset` |
 | GET | `/reviews/{id}/summary` | any | Counts by risk, check, and system |
-| GET | `/reviews/{id}/report/excel`, `/report/pdf` | any | Added in Phase 5 |
+| GET | `/reviews/{id}/report/excel` | any | Excel workbook: summary sheet, one sheet per check, all findings |
+| GET | `/reviews/{id}/report/pdf` | any | PDF audit report: cover, executive summary, detailed findings, appendix |
 
 Uploads are validated before anything is stored. A rejected upload returns `422` and lists every problem in every file at once, with file names and row numbers, for example:
 
@@ -208,6 +209,25 @@ Uploads are validated before anything is stored. A rejected upload returns `422`
 ```
 
 Checks: `.csv` extension, UTF-8 encoding, 10 MB limit, required columns, at least one data row, no blank key fields, unique `employee_id`/`user_id`, `YYYY-MM-DD` dates, HR status of `Active` or `Terminated`, and a termination date for every terminated employee.
+
+## Audit reports
+
+Both reports come from the same review data and use the audit-finding structure an ITGC workpaper expects.
+
+**PDF report** (ReportLab)
+1. **Cover page:** "User Access Review — Apex Bank", review date (data as of), systems in scope with account counts, HR record count, review reference, preparer.
+2. **Executive summary:** scope and approach, findings by risk rating, key observations (High and Medium checks ranked by severity), and findings by check as a table and a bar chart.
+3. **Detailed findings:** one block per check in audit format. **Condition** is generated from the actual results, with counts, affected systems, risk split and example exceptions. **Criteria**, **Risk / Impact** and **Recommendation** come from the check's registration. Checks with no exceptions are reported as "No exceptions were identified".
+4. **Appendix A:** the full exception list, on landscape pages with a repeating header row.
+
+Every page after the cover has a header, a "Confidential" marker and "Page X of Y".
+
+**Excel workbook** (openpyxl)
+- **Summary:** review metadata, findings by risk (with %), findings by check split by risk with a hyperlink to each check's sheet, and findings by system.
+- **One sheet per check:** the Condition, Criteria, Risk / Impact and Recommendation blocks, then that check's findings as a filterable Excel table with a frozen header and risk-tinted cells.
+- **All Findings:** every exception in one filterable table.
+
+The organisation name on reports is set by `ORGANIZATION_NAME` (default `Apex Bank`).
 
 ## Screenshots
 
@@ -230,11 +250,21 @@ Checks: `.csv` extension, UTF-8 encoding, 10 MB limit, required columns, at leas
   <img src="docs/screenshots/findings-mobile.png" alt="Findings on mobile" width="28%">
 </p>
 
+**PDF audit report.** Cover, executive summary, a detailed finding in audit format, and the appendix.
+
+<p>
+  <img src="docs/screenshots/report-cover.png" alt="Report cover page" width="32%">
+  <img src="docs/screenshots/report-summary.png" alt="Executive summary" width="32%">
+  <img src="docs/screenshots/report-finding.png" alt="Detailed finding in audit format" width="32%">
+</p>
+
+![Appendix: full exception list](docs/screenshots/report-appendix.png)
+
 ## Build progress
 
 - [x] Phase 1 — Dummy data generator
 - [x] Phase 2 — Audit checks (core logic) + unit tests
 - [x] Phase 3 — Backend API (FastAPI + JWT auth + PostgreSQL)
 - [x] Phase 4 — Frontend (React + Tailwind dashboard)
-- [ ] Phase 5 — Audit report generation (Excel + PDF)
+- [x] Phase 5 — Audit report generation (Excel + PDF)
 - [ ] Phase 6 — Full test suite, polish, Docker Compose

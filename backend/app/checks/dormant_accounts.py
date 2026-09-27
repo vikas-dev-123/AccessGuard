@@ -9,6 +9,7 @@ NAME = "Dormant accounts"
 @register_check(
     code="dormant_accounts",
     name=NAME,
+    condition='active accounts have had no login for 90 days or more.',
     criteria="Active accounts with no login for 90 days or more should be disabled, "
              "or their business need re-confirmed.",
     impact="Unused accounts go unwatched, which makes them easy targets for credential misuse. "

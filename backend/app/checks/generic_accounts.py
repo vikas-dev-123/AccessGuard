@@ -9,6 +9,7 @@ NAME = "Generic/shared accounts"
 @register_check(
     code="generic_shared_accounts",
     name=NAME,
+    condition='active accounts use generic, shared, test or temporary usernames that are not tied to one individual.',
     criteria="Each account must belong to one named individual. Generic, shared, test, and temporary "
              "accounts are not allowed in production without a documented exception.",
     impact="When a login is shared, no action can be traced to one person, so fraud or errors on "

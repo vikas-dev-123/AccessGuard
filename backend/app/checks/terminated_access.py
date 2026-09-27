@@ -7,6 +7,7 @@ NAME = "Terminated users with active access"
 @register_check(
     code="terminated_active_access",
     name=NAME,
+    condition='accounts belonging to employees marked Terminated in the HR master were still Active.',
     criteria="Access to banking systems must be revoked when employment ends. "
              "Terminated employees must not hold active accounts.",
     impact="A former employee, or anyone holding their credentials, can still log in and "

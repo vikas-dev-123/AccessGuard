@@ -21,6 +21,7 @@ class Settings:
     auditor_password: str = field(default_factory=lambda: _env("AUDITOR_PASSWORD", "Auditor@123"))
     viewer_username: str = field(default_factory=lambda: _env("VIEWER_USERNAME", "viewer"))
     viewer_password: str = field(default_factory=lambda: _env("VIEWER_PASSWORD", "Viewer@123"))
+    organization_name: str = field(default_factory=lambda: _env("ORGANIZATION_NAME", "Apex Bank"))
     max_upload_bytes: int = 10 * 1024 * 1024
 
 

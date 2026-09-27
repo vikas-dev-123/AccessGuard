@@ -9,6 +9,7 @@ NAME = "Segregation of Duties conflicts"
 @register_check(
     code="sod_conflicts",
     name=NAME,
+    condition='cases were identified where a single employee holds a combination of roles that the SoD rule set defines as conflicting.',
     criteria="No employee may hold a combination of roles that the bank's SoD rule set defines as "
              "conflicting, whether in one system or across systems.",
     impact="One person can start and complete a sensitive transaction, such as creating and approving "

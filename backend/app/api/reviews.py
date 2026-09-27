@@ -1,6 +1,6 @@
 from datetime import date
 
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
@@ -10,9 +10,12 @@ from app.checks import RiskRating, get_checks
 from app.db import get_db
 from app.models import Dataset, Review, User
 from app.schemas import CheckOut, FindingsPage, ReviewOut, RunReviewRequest, SummaryOut
+from app.reports import build_excel, build_pdf, build_report_data
 from app.services.reviews import query_findings, review_summary, run_review
 
 router = APIRouter(tags=["reviews"])
+
+XLSX_MEDIA_TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 
 
 def get_review_or_404(db: Session, review_id: int) -> Review:
@@ -24,8 +27,8 @@ def get_review_or_404(db: Session, review_id: int) -> Review:
 
 @router.get("/checks", response_model=list[CheckOut])
 def list_checks(_: User = Depends(require_any_user)):
-    return [CheckOut(code=c.code, name=c.name, criteria=c.criteria, impact=c.impact,
-                     recommendation=c.recommendation) for c in get_checks()]
+    return [CheckOut(code=c.code, name=c.name, condition=c.condition, criteria=c.criteria,
+                     impact=c.impact, recommendation=c.recommendation) for c in get_checks()]
 
 
 @router.post("/reviews/run", response_model=ReviewOut, status_code=status.HTTP_201_CREATED)
@@ -79,3 +82,22 @@ def list_findings(
 def get_summary(review_id: int, db: Session = Depends(get_db), _: User = Depends(require_any_user)):
     review = get_review_or_404(db, review_id)
     return SummaryOut(review_id=review.id, **review_summary(db, review))
+
+
+def _attachment(content: bytes, media_type: str, filename: str) -> Response:
+    return Response(content, media_type=media_type,
+                    headers={"Content-Disposition": f'attachment; filename="{filename}"'})
+
+
+@router.get("/reviews/{review_id}/report/excel", response_class=Response,
+            responses={200: {"content": {XLSX_MEDIA_TYPE: {}}}})
+def excel_report(review_id: int, db: Session = Depends(get_db), _: User = Depends(require_any_user)):
+    data = build_report_data(db, get_review_or_404(db, review_id))
+    return _attachment(build_excel(data), XLSX_MEDIA_TYPE, data.filename("xlsx"))
+
+
+@router.get("/reviews/{review_id}/report/pdf", response_class=Response,
+            responses={200: {"content": {"application/pdf": {}}}})
+def pdf_report(review_id: int, db: Session = Depends(get_db), _: User = Depends(require_any_user)):
+    data = build_report_data(db, get_review_or_404(db, review_id))
+    return _attachment(build_pdf(data), "application/pdf", data.filename("pdf"))

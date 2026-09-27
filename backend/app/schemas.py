@@ -73,6 +73,7 @@ class SummaryOut(BaseModel):
 class CheckOut(BaseModel):
     code: str
     name: str
+    condition: str
     criteria: str
     impact: str
     recommendation: str

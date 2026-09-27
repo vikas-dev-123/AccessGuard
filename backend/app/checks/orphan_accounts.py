@@ -7,6 +7,7 @@ NAME = "Orphan accounts"
 @register_check(
     code="orphan_accounts",
     name=NAME,
+    condition='active accounts could not be matched to any employee in the HR master.',
     criteria="Every active system account must be traceable to a current employee in the HR master record.",
     impact="An account with no owner cannot be held to account. Orphan accounts are a common route "
            "for fraud, and often belong to contractors, test setups, or leavers missing from HR records.",
