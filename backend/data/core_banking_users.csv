@@ -1,0 +1,101 @@
+user_id,employee_id,username,role,account_status,created_date,last_login_date,status_last_updated
+CB-0001,EMP0004,daniel.wagner,Branch Manager,Active,2021-03-13,2026-09-24,2021-03-13
+CB-0002,EMP0005,cristian.santos,Teller,Active,2020-12-21,2026-08-23,2020-12-21
+CB-0003,EMP0009,gabrielle.davis,Teller,Disabled,2023-01-06,2024-03-30,2025-02-05
+CB-0004,EMP0013,lisa.hensley,Teller,Active,2021-12-30,2026-09-26,2021-12-30
+CB-0005,EMP0020,carla.gray,Teller,Active,2019-02-12,2026-09-07,2019-02-12
+CB-0006,EMP0027,justin.baker,Teller,Active,2025-10-16,2026-09-16,2025-10-16
+CB-0007,EMP0030,anthony.rodriguez,Teller,Active,2026-05-26,2026-08-15,2026-05-26
+CB-0008,EMP0038,cassandra.gaines,Account Opener,Active,2024-03-16,2026-09-02,2024-03-16
+CB-0009,EMP0045,angelica.tucker,Transaction Approver,Active,2024-12-16,2026-09-17,2024-12-16
+CB-0010,EMP0046,philip.cannon,Teller,Disabled,2025-10-31,2026-01-25,2026-03-03
+CB-0011,EMP0047,john.pierce,Teller,Active,2019-07-20,2026-08-15,2019-07-20
+CB-0012,EMP0063,connor.west,Teller,Disabled,2024-10-30,2025-03-21,2025-11-30
+CB-0013,EMP0064,donald.wright,Teller,Active,2025-04-21,2026-09-09,2025-04-21
+CB-0014,EMP0066,amber.kidd,Branch Manager,Active,2019-07-09,2026-08-18,2019-07-09
+CB-0015,EMP0073,brittney.phillips,Account Opener,Active,2023-11-21,2026-09-08,2023-11-21
+CB-0016,EMP0076,sarah.moore,Teller,Disabled,2022-11-22,2025-04-18,2025-07-04
+CB-0017,EMP0083,michael.evans,Teller,Active,2025-11-11,2026-09-08,2025-11-11
+CB-0018,EMP0093,denise.jacobs,Branch Manager,Active,2022-06-23,2026-08-31,2022-06-23
+CB-0019,EMP0106,marc.moore,Branch Manager,Active,2024-10-15,2026-09-17,2024-10-15
+CB-0020,EMP0109,evelyn.galvan,Teller,Active,2024-06-09,2026-08-18,2024-06-09
+CB-0021,EMP0124,michelle.harmon,Teller,Active,2023-07-08,2026-09-18,2023-07-08
+CB-0022,EMP0154,devon.flores,Account Opener,Active,2019-01-16,2026-08-13,2019-01-16
+CB-0023,EMP0166,john.anderson,Branch Manager,Active,2023-10-23,2026-09-09,2023-10-23
+CB-0024,EMP0171,jamie.walton,Teller,Active,2023-04-21,2026-09-15,2023-04-21
+CB-0025,EMP0187,jonathan.peterson,Teller,Active,2023-04-01,2026-09-13,2023-04-01
+CB-0026,EMP0189,madison.poole,Branch Manager,Active,2020-01-30,2026-08-16,2020-01-30
+CB-0027,EMP0194,angelica.keith,Teller,Disabled,2025-10-06,2025-11-11,2026-01-13
+CB-0028,EMP0199,adam.vaughan,Account Opener,Active,2021-09-21,2026-09-13,2021-09-21
+CB-0029,EMP0010,ryan.munoz,Teller,Active,2019-03-25,2026-09-22,2019-03-25
+CB-0030,EMP0011,monica.herrera,Transaction Approver,Disabled,2022-12-28,2023-11-11,2024-10-31
+CB-0031,EMP0018,derek.zuniga,Transaction Approver,Active,2020-07-29,2026-09-17,2020-07-29
+CB-0032,EMP0028,stephanie.ross,Account Opener,Active,2023-01-22,2026-08-27,2023-01-22
+CB-0033,EMP0036,jeffrey.chavez,Teller,Active,2024-03-25,2026-09-27,2024-03-25
+CB-0034,EMP0039,elizabeth.fowler,Teller,Active,2020-03-10,2026-09-27,2020-03-10
+CB-0035,EMP0040,brittany.farmer,Teller,Active,2021-09-22,2026-09-27,2021-09-22
+CB-0036,EMP0041,paula.moreno,Teller,Active,2021-02-15,2026-09-12,2021-02-15
+CB-0037,EMP0057,timothy.duncan,Account Opener,Active,2019-04-25,2026-09-11,2019-04-25
+CB-0038,EMP0058,richard.aguirre,Transaction Approver,Active,2019-10-17,2026-09-06,2019-10-17
+CB-0039,EMP0065,jessica.callahan,Teller,Active,2019-05-23,2026-09-14,2019-05-23
+CB-0040,EMP0074,lauren.daniels,Branch Manager,Active,2019-07-27,2025-11-01,2019-07-27
+CB-0041,EMP0075,amy.silva,Teller,Active,2020-03-27,2026-09-03,2020-03-27
+CB-0042,EMP0077,angela.lopez,Transaction Approver,Active,2025-08-10,2026-08-13,2025-08-10
+CB-0043,EMP0086,daniel.baker,Teller,Disabled,2025-01-17,2025-05-22,2025-06-22
+CB-0044,EMP0088,christopher.bass,Teller,Active,2023-07-28,2026-09-04,2023-07-28
+CB-0045,EMP0104,christine.wright,Teller,Active,2023-01-27,2026-02-27,2023-01-27
+CB-0046,EMP0111,richard.rodriguez,Account Opener,Active,2020-11-25,2026-09-02,2020-11-25
+CB-0047,EMP0115,garrett.lin,Teller,Active,2023-12-21,2026-08-28,2023-12-21
+CB-0048,EMP0121,larry.dixon,Transaction Approver,Active,2023-11-10,2026-08-27,2023-11-10
+CB-0049,EMP0127,michelle.evans,Account Opener,Active,2023-09-15,2026-09-02,2023-09-15
+CB-0050,EMP0133,mary.marshall,Branch Manager,Active,2020-04-20,2026-09-27,2020-04-20
+CB-0051,EMP0143,patricia.rodriguez,Branch Manager,Active,2019-09-12,2026-08-22,2019-09-12
+CB-0052,EMP0151,david.wright,Account Opener,Active,2023-12-16,2025-09-18,2023-12-16
+CB-0053,EMP0155,brenda.hall,Transaction Approver,Active,2023-03-15,2026-09-03,2023-03-15
+CB-0054,EMP0160,jamie.smith,Teller,Active,2018-11-22,2026-08-19,2018-11-22
+CB-0055,EMP0164,jeffrey.johnson,Transaction Approver,Active,2023-12-19,2026-08-13,2023-12-19
+CB-0056,EMP0167,alyssa.long,Branch Manager,Disabled,2022-07-08,2024-05-08,2024-07-13
+CB-0057,EMP0183,angela.vaughn,Teller,Active,2026-07-25,2026-09-12,2026-07-25
+CB-0058,EMP0185,lindsay.martinez,Teller,Active,2024-01-05,2026-09-21,2024-01-05
+CB-0059,EMP0188,samantha.garcia,Branch Manager,Active,2020-06-14,2026-09-11,2020-06-14
+CB-0060,EMP0197,daniel.salinas,Branch Manager,Disabled,2022-01-07,2022-11-27,2023-10-16
+CB-0061,EMP0029,zachary.hicks,Admin,Active,2021-09-09,2026-09-09,2021-09-09
+CB-0062,EMP0032,james.ferrell,Admin,Active,2021-10-17,2026-09-20,2021-10-17
+CB-0063,EMP0103,rebecca.valencia,Admin,Active,2022-05-08,2026-09-08,2022-05-08
+CB-0064,EMP0140,angel.perry,Admin,Active,2023-03-01,2026-08-26,2023-03-01
+CB-0065,,melissa.brewer,Transaction Approver,Active,2022-09-25,2026-09-11,2022-09-25
+CB-0066,,bryan.herrera,Transaction Approver,Active,2023-06-25,2026-09-10,2023-06-25
+CB-0067,,cathy.robinson,Account Opener,Active,2022-01-22,2026-08-31,2022-01-22
+CB-0068,,dr.warren,Teller,Active,2025-05-10,2026-09-21,2025-05-10
+CB-0069,,julie.alexander,Branch Manager,Active,2024-07-27,2026-08-15,2024-07-27
+CB-0070,,anthony.everett,Transaction Approver,Active,2025-09-16,2026-09-10,2025-09-16
+CB-0071,,courtney.mills,Transaction Approver,Active,2024-11-13,2026-08-31,2024-11-13
+CB-0072,,elizabeth.dds,Branch Manager,Active,2025-01-03,2026-03-18,2025-01-03
+CB-0073,EMP0064,temp,Account Opener,Active,2023-03-05,2026-08-19,2023-03-05
+CB-0074,EMP0149,backup_admin,Branch Manager,Active,2023-08-09,2026-08-24,2023-08-09
+CB-0075,EMP0096,shared_acct,Transaction Approver,Active,2024-06-22,2026-08-25,2024-06-22
+CB-0076,EMP0183,training,Teller,Active,2024-10-27,2026-09-27,2024-10-27
+CB-0077,EMP0119,admin,Account Opener,Active,2023-04-18,2026-08-22,2023-04-18
+CB-0078,EMP0177,admin38,Branch Manager,Active,2026-08-23,2026-09-22,2026-08-23
+CB-0079,EMP0199,temp72,Teller,Active,2025-02-10,2026-04-18,2025-02-10
+CB-0080,EMP0049,shared,Branch Manager,Active,2023-01-03,2026-09-08,2023-01-03
+CB-0081,EMP0093,denise.jacobs2,Admin,Active,2022-07-25,2026-08-15,2022-07-25
+CB-0082,EMP0077,angela.lopez2,Admin,Active,2025-09-28,2026-09-24,2025-09-28
+CB-0083,EMP0092,brian.rodriguez,Admin,Active,2020-11-01,2026-09-03,2020-11-01
+CB-0084,EMP0153,denise.jones,Admin,Active,2020-09-17,2026-09-12,2020-09-17
+CB-0085,EMP0115,garrett.lin2,Admin,Active,2024-02-08,2026-09-11,2024-02-08
+CB-0086,EMP0078,megan.young,Admin,Active,2026-04-12,2026-08-15,2026-04-12
+CB-0087,EMP0172,darlene.miller,Admin,Active,2026-02-17,2026-09-23,2026-02-17
+CB-0088,EMP0083,michael.evans2,Account Opener,Active,2026-01-04,2026-08-18,2026-01-04
+CB-0089,EMP0083,michael.evans3,Transaction Approver,Active,2025-12-30,2026-09-09,2025-12-30
+CB-0090,EMP0187,jonathan.peterson2,Account Opener,Active,2023-04-22,2026-05-15,2023-04-22
+CB-0091,EMP0187,jonathan.peterson3,Transaction Approver,Active,2023-04-07,2026-09-02,2023-04-07
+CB-0092,EMP0020,carla.gray2,Account Opener,Active,2019-03-03,2026-09-10,2019-03-03
+CB-0093,EMP0020,carla.gray3,Transaction Approver,Active,2019-03-22,2026-09-27,2019-03-22
+CB-0094,EMP0073,brittney.phillips2,Transaction Approver,Active,2024-01-03,2026-08-16,2024-01-03
+CB-0095,EMP0105,richard.henson,Account Opener,Active,2019-04-26,2026-09-06,2019-04-26
+CB-0096,EMP0105,richard.henson2,Transaction Approver,Active,2019-05-09,2026-08-15,2019-05-09
+CB-0097,EMP0047,john.pierce2,Account Opener,Active,2019-08-15,2026-09-02,2019-08-15
+CB-0098,EMP0047,john.pierce3,Transaction Approver,Active,2019-08-31,2026-06-15,2019-08-31
+CB-0099,EMP0178,michael.wang,Account Opener,Active,2021-01-18,2026-05-26,2021-01-18
+CB-0100,EMP0178,michael.wang2,Transaction Approver,Active,2021-01-14,2026-09-10,2021-01-14

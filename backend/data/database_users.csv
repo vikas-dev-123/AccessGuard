@@ -1,0 +1,146 @@
+user_id,employee_id,username,role,account_status,created_date,last_login_date,status_last_updated
+DB-0001,EMP0021,margaret.dds,Developer,Disabled,2019-06-29,2021-05-02,2026-01-15
+DB-0002,EMP0023,ethan.adams,Read Only,Active,2023-11-24,2026-09-18,2023-11-24
+DB-0003,EMP0025,matthew.foster,Developer,Active,2023-03-22,2026-09-11,2023-03-22
+DB-0004,EMP0029,zachary.hicks,DBA,Active,2021-07-25,2025-10-11,2021-07-25
+DB-0005,EMP0032,james.ferrell,Developer,Active,2021-09-16,2026-09-25,2021-09-16
+DB-0006,EMP0044,anthony.humphrey,DBA,Disabled,2021-07-14,2021-10-14,2023-08-02
+DB-0007,EMP0050,eric.carney,Developer,Disabled,2019-10-20,2022-10-22,2024-11-10
+DB-0008,EMP0055,shannon.jones,Read Only,Disabled,2023-06-25,2025-02-12,2026-03-27
+DB-0009,EMP0061,victoria.garcia,Developer,Disabled,2023-11-10,2024-02-28,2026-01-28
+DB-0010,EMP0069,james.brown,Developer,Active,2025-04-18,2025-09-19,2025-04-18
+DB-0011,EMP0091,matthew.mcmillan,Developer,Active,2020-06-27,2026-09-02,2020-06-27
+DB-0012,EMP0094,christina.walters,DBA,Disabled,2021-07-12,2025-02-02,2026-02-07
+DB-0013,EMP0096,anna.henderson,Developer,Active,2020-12-29,2026-09-01,2020-12-29
+DB-0014,EMP0097,aaron.wise,Developer,Active,2022-03-02,2026-08-21,2022-03-02
+DB-0015,EMP0099,jessica.smith,Read Only,Active,2021-11-13,2026-09-01,2021-11-13
+DB-0016,EMP0103,rebecca.valencia,DBA,Active,2022-04-05,2026-04-23,2022-04-05
+DB-0017,EMP0110,sharon.cochran,Read Only,Active,2023-04-08,2026-08-21,2023-04-08
+DB-0018,EMP0112,shannon.walker,Developer,Active,2020-09-12,2026-09-24,2020-09-12
+DB-0019,EMP0123,april.frost,DBA,Active,2020-05-30,2026-09-16,2020-05-30
+DB-0020,EMP0125,helen.jones,Developer,Disabled,2025-01-03,2025-04-19,2025-07-01
+DB-0021,EMP0126,erin.edwards,Developer,Active,2023-12-18,2026-09-21,2023-12-18
+DB-0022,EMP0136,jose.schultz,Developer,Active,2026-07-19,2026-09-14,2026-07-19
+DB-0023,EMP0137,robert.potter,Read Only,Active,2018-10-26,2026-08-28,2018-10-26
+DB-0024,EMP0140,angel.perry,Developer,Active,2023-02-07,2026-09-25,2023-02-07
+DB-0025,EMP0146,joyce.solis,Developer,Active,2023-06-26,2026-09-06,2023-06-26
+DB-0026,EMP0147,victoria.larson,Developer,Disabled,2024-10-17,2025-06-06,2026-01-11
+DB-0027,EMP0161,paul.castaneda,Read Only,Active,2023-08-10,2026-09-23,2023-08-10
+DB-0028,EMP0173,joshua.cooke,Developer,Disabled,2019-10-15,2024-03-13,2024-06-26
+DB-0029,EMP0176,alex.hernandez,Developer,Active,2024-12-01,2025-09-08,2024-12-01
+DB-0030,EMP0190,jessica.gross,Read Only,Active,2025-06-09,2026-08-26,2025-06-09
+DB-0031,EMP0192,karen.graham,Developer,Active,2025-05-06,2026-09-03,2025-05-06
+DB-0032,EMP0007,abigail.shaffer,Read Only,Active,2020-07-14,2026-09-20,2020-07-14
+DB-0033,EMP0008,gina.moore,Read Only,Disabled,2020-06-26,2021-04-18,2024-06-09
+DB-0034,EMP0015,dylan.miller,Read Only,Active,2022-11-24,2026-09-16,2022-11-24
+DB-0035,EMP0019,lisa.jackson,Read Only,Active,2026-06-05,2026-08-24,2026-06-05
+DB-0036,EMP0031,rebecca.henderson,Read Only,Disabled,2019-12-29,2020-05-11,2021-12-05
+DB-0037,EMP0034,nathan.maldonado,Read Only,Active,2020-06-16,2026-09-04,2020-06-16
+DB-0038,EMP0037,sherri.baker,Read Only,Disabled,2019-05-25,2019-07-28,2025-12-25
+DB-0039,EMP0048,shane.henderson,Read Only,Active,2021-02-23,2026-08-29,2021-02-23
+DB-0040,EMP0051,jessica.holmes,Read Only,Active,2023-05-09,2026-08-21,2023-05-09
+DB-0041,EMP0054,mark.perez,Read Only,Disabled,2021-07-18,2024-06-29,2024-09-14
+DB-0042,EMP0070,william.baker,Read Only,Active,2021-01-12,2026-08-17,2021-01-12
+DB-0043,EMP0071,jordan.henderson,Read Only,Active,2021-09-23,2026-09-10,2021-09-23
+DB-0044,EMP0079,steve.sanchez,Read Only,Disabled,2020-04-03,2020-11-20,2021-09-16
+DB-0045,EMP0082,mike.allen,Read Only,Active,2021-07-27,2026-08-27,2021-07-27
+DB-0046,EMP0084,paul.jones,Read Only,Active,2018-10-17,2026-08-15,2018-10-17
+DB-0047,EMP0089,lisa.archer,Read Only,Disabled,2022-10-08,2024-01-20,2024-05-07
+DB-0048,EMP0100,stephen.mckee,Read Only,Active,2025-12-13,2026-08-14,2025-12-13
+DB-0049,EMP0113,julia.torres,Read Only,Active,2024-11-20,2025-12-22,2024-11-20
+DB-0050,EMP0114,crystal.johnson,Read Only,Active,2021-02-08,2026-09-09,2021-02-08
+DB-0051,EMP0135,rebecca.jackson,Read Only,Active,2023-06-03,2026-08-14,2023-06-03
+DB-0052,EMP0138,courtney.gonzalez,Read Only,Active,2023-06-16,2026-09-10,2023-06-16
+DB-0053,EMP0145,amber.wright,Read Only,Active,2023-11-04,2026-08-18,2023-11-04
+DB-0054,EMP0152,pamela.boyd,Read Only,Active,2025-07-17,2026-09-20,2025-07-17
+DB-0055,EMP0158,jason.stein,Read Only,Active,2025-02-03,2026-08-17,2025-02-03
+DB-0056,EMP0159,melissa.gates,Read Only,Active,2026-03-01,2026-08-30,2026-03-01
+DB-0057,EMP0169,joel.williams,Read Only,Active,2021-11-21,2026-01-21,2021-11-21
+DB-0058,EMP0175,nicole.herring,Read Only,Active,2024-12-17,2026-09-17,2024-12-17
+DB-0059,EMP0180,robert.oconnell,Read Only,Active,2019-11-19,2026-09-02,2019-11-19
+DB-0060,EMP0181,alexander.collins,Read Only,Active,2022-10-19,2026-08-15,2022-10-19
+DB-0061,EMP0186,dr.patterson,Read Only,Disabled,2019-05-01,2019-11-20,2024-11-03
+DB-0062,EMP0193,debra.christian,Read Only,Active,2025-08-05,2026-08-20,2025-08-05
+DB-0063,EMP0001,allison.hill,Read Only,Active,2019-01-14,2026-09-23,2019-01-14
+DB-0064,EMP0003,angie.henderson,Read Only,Active,2025-05-17,2026-08-26,2025-05-17
+DB-0065,EMP0006,connie.lawrence,Read Only,Active,2021-03-22,2026-09-10,2021-03-22
+DB-0066,EMP0012,jamie.arnold,Read Only,Disabled,2025-03-21,2025-05-03,2025-07-07
+DB-0067,EMP0016,brian.ramirez,Read Only,Active,2026-08-15,2026-09-09,2026-08-15
+DB-0068,EMP0017,holly.wood,Read Only,Active,2025-08-01,2026-08-19,2025-08-01
+DB-0069,EMP0022,patty.perez,Read Only,Active,2021-02-17,2026-09-09,2021-02-17
+DB-0070,EMP0042,fred.smith,Read Only,Active,2022-03-30,2026-09-24,2022-03-30
+DB-0071,EMP0043,sherry.decker,Read Only,Active,2023-08-30,2026-09-05,2023-08-30
+DB-0072,EMP0049,joshua.blair,Read Only,Active,2021-06-21,2026-09-25,2021-06-21
+DB-0073,EMP0052,danny.morgan,Read Only,Active,2026-04-21,2026-08-17,2026-04-21
+DB-0074,EMP0053,crystal.robinson,Read Only,Active,2019-06-04,2026-08-18,2019-06-04
+DB-0075,EMP0062,gerald.hensley,Read Only,Active,2020-06-24,2026-09-22,2020-06-24
+DB-0076,EMP0067,tracy.house,Read Only,Disabled,2023-04-14,2024-01-05,2026-08-18
+DB-0077,EMP0072,whitney.peters,Read Only,Active,2023-11-18,2026-08-16,2023-11-18
+DB-0078,EMP0078,megan.young,Read Only,Active,2026-03-30,2026-09-17,2026-03-30
+DB-0079,EMP0080,lisa.barnes,Read Only,Disabled,2021-10-22,2022-09-30,2023-02-22
+DB-0080,EMP0081,kelly.donovan,Read Only,Active,2021-01-09,2026-09-08,2021-01-09
+DB-0081,EMP0087,shirley.suarez,Read Only,Disabled,2024-11-12,2025-11-16,2026-01-23
+DB-0082,EMP0090,aimee.montoya,Read Only,Active,2022-09-16,2026-08-31,2022-09-16
+DB-0083,EMP0095,john.whitehead,Read Only,Active,2023-01-16,2026-09-01,2023-01-16
+DB-0084,EMP0101,sandra.aguilar,Read Only,Active,2019-01-22,2026-09-07,2019-01-22
+DB-0085,EMP0107,sharon.cherry,Read Only,Active,2022-10-30,2026-08-22,2022-10-30
+DB-0086,EMP0108,sierra.johnson,Read Only,Active,2025-09-29,2026-09-12,2025-09-29
+DB-0087,EMP0116,diana.may,Read Only,Active,2024-06-23,2026-08-19,2024-06-23
+DB-0088,EMP0117,william.herrera,Read Only,Active,2026-02-19,2026-09-09,2026-02-19
+DB-0089,EMP0118,ashley.waller,Read Only,Active,2019-10-18,2026-09-18,2019-10-18
+DB-0090,EMP0122,kenneth.scott,Read Only,Active,2026-07-22,2026-09-09,2026-07-22
+DB-0091,EMP0128,jason.powell,Read Only,Active,2024-11-24,2026-09-21,2024-11-24
+DB-0092,EMP0130,megan.orr,Read Only,Active,2024-08-07,2026-09-25,2024-08-07
+DB-0093,EMP0134,daniel.kennedy,Read Only,Disabled,2021-02-26,2022-11-11,2023-09-13
+DB-0094,EMP0139,david.alvarez,Read Only,Disabled,2024-03-25,2024-04-08,2025-08-09
+DB-0095,EMP0141,cheyenne.horton,Read Only,Active,2020-08-06,2026-08-30,2020-08-06
+DB-0096,EMP0153,denise.jones,Read Only,Active,2020-08-04,2026-09-01,2020-08-04
+DB-0097,EMP0157,joshua.perry,Read Only,Active,2019-11-22,2026-09-04,2019-11-22
+DB-0098,EMP0162,jennifer.adkins,Read Only,Active,2020-06-16,2026-08-24,2020-06-16
+DB-0099,EMP0163,lindsey.walker,Read Only,Active,2025-08-26,2026-09-18,2025-08-26
+DB-0100,EMP0165,michael.powell,Read Only,Active,2022-05-16,2026-09-07,2022-05-16
+DB-0101,EMP0170,daniel.murphy,Read Only,Disabled,2024-12-22,2025-01-06,2025-09-03
+DB-0102,EMP0174,matthew.harrington,Read Only,Active,2022-03-06,2026-09-15,2022-03-06
+DB-0103,EMP0177,michael.elliott,Read Only,Active,2021-10-13,2026-09-06,2021-10-13
+DB-0104,EMP0179,lawrence.adkins,Read Only,Disabled,2020-11-24,2022-10-23,2026-06-27
+DB-0105,EMP0182,tina.sanders,Read Only,Disabled,2021-10-27,2022-01-14,2022-05-28
+DB-0106,EMP0184,ashley.barton,Read Only,Active,2019-11-28,2026-09-02,2019-11-28
+DB-0107,EMP0198,spencer.haynes,Read Only,Active,2026-08-21,2026-08-26,2026-08-21
+DB-0108,EMP0200,nathan.freeman,Read Only,Disabled,2023-07-06,2023-12-14,2024-12-24
+DB-0109,,ricky.ii,Developer,Active,2026-01-01,2026-09-25,2026-01-01
+DB-0110,,elizabeth.perkins,Developer,Active,2025-05-06,2025-12-26,2025-05-06
+DB-0111,,david.martinez,Developer,Active,2022-01-21,2026-09-14,2022-01-21
+DB-0112,,brian.lee,Developer,Active,2024-08-01,2026-09-11,2024-08-01
+DB-0113,,christopher.smith,Read Only,Active,2024-11-06,2026-09-10,2024-11-06
+DB-0114,,denise.mccann,Read Only,Active,2025-05-24,2025-10-19,2025-05-24
+DB-0115,,melissa.martinez,Read Only,Active,2024-05-29,2026-08-16,2024-05-29
+DB-0116,,rodney.morales,Read Only,Active,2024-09-02,2026-09-05,2024-09-02
+DB-0117,,bailey.dds,Read Only,Active,2023-08-14,2026-09-03,2023-08-14
+DB-0118,,matthew.moore,Read Only,Active,2025-09-18,2026-09-01,2025-09-18
+DB-0119,EMP0192,testuser,Read Only,Active,2024-10-08,2026-09-05,2024-10-08
+DB-0120,EMP0198,shared_acct,Developer,Active,2022-12-14,2026-09-21,2022-12-14
+DB-0121,EMP0069,backup_admin,Read Only,Active,2025-03-12,2026-09-08,2025-03-12
+DB-0122,EMP0066,shared_acct55,Read Only,Active,2023-11-10,2026-08-29,2023-11-10
+DB-0123,EMP0109,test,Read Only,Active,2023-03-18,2026-08-30,2023-03-18
+DB-0124,EMP0095,admin2,Read Only,Active,2024-11-26,2026-09-05,2024-11-26
+DB-0125,EMP0028,backup_admin60,Developer,Active,2023-05-13,2026-09-20,2023-05-13
+DB-0126,EMP0193,admin,Read Only,Active,2025-12-18,2026-09-27,2025-12-18
+DB-0127,EMP0065,jessica.callahan,DBA,Active,2019-06-28,2026-08-14,2019-06-28
+DB-0128,EMP0001,allison.hill2,DBA,Active,2019-02-06,2026-08-29,2019-02-06
+DB-0129,EMP0141,cheyenne.horton2,DBA,Active,2020-09-01,2026-08-17,2020-09-01
+DB-0130,EMP0052,danny.morgan2,DBA,Active,2026-06-11,2026-09-19,2026-06-11
+DB-0131,EMP0127,michelle.evans,DBA,Active,2023-10-11,2026-08-21,2023-10-11
+DB-0132,EMP0041,paula.moreno,DBA,Active,2021-02-28,2026-09-25,2021-02-28
+DB-0133,EMP0017,holly.wood2,DBA,Active,2025-09-23,2026-08-21,2025-09-23
+DB-0134,EMP0015,dylan.miller2,DBA,Active,2022-11-30,2026-03-06,2022-11-30
+DB-0135,EMP0118,ashley.waller2,DBA,Active,2019-11-22,2026-09-07,2019-11-22
+DB-0136,EMP0111,richard.rodriguez,DBA,Active,2020-12-31,2026-09-12,2020-12-31
+DB-0137,EMP0154,devon.flores,Developer,Active,2019-01-27,2026-09-26,2019-01-27
+DB-0138,EMP0154,devon.flores2,DBA,Active,2019-02-14,2026-09-04,2019-02-14
+DB-0139,EMP0092,brian.rodriguez,Developer,Active,2020-09-30,2026-09-04,2020-09-30
+DB-0140,EMP0092,brian.rodriguez2,DBA,Active,2020-11-06,2026-09-09,2020-11-06
+DB-0141,EMP0103,rebecca.valencia2,Developer,Active,2022-04-12,2026-08-21,2022-04-12
+DB-0142,EMP0190,jessica.gross2,Developer,Active,2025-07-28,2026-08-17,2025-07-28
+DB-0143,EMP0190,jessica.gross3,DBA,Active,2025-07-16,2026-08-21,2025-07-16
+DB-0144,EMP0191,debra.morton,Developer,Active,2023-02-11,2026-09-06,2023-02-11
+DB-0145,EMP0191,debra.morton2,DBA,Active,2023-02-13,2026-08-20,2023-02-13

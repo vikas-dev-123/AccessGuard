@@ -1,0 +1,201 @@
+employee_id,name,department,designation,status,joining_date,termination_date
+EMP0001,Allison Hill,Finance,Financial Analyst,Active,2019-01-09,
+EMP0002,Noah Rhodes,Loans,Credit Analyst,Active,2020-04-22,
+EMP0003,Angie Henderson,Finance,Financial Analyst,Active,2025-05-13,
+EMP0004,Daniel Wagner,Retail Banking,Teller,Terminated,2021-03-12,2024-09-24
+EMP0005,Cristian Santos,Retail Banking,Branch Manager,Active,2020-12-21,
+EMP0006,Connie Lawrence,Finance,Controller,Active,2021-03-19,
+EMP0007,Abigail Shaffer,Treasury,Treasury Analyst,Active,2020-07-13,
+EMP0008,Gina Moore,Treasury,Fund Manager,Terminated,2020-06-26,2024-06-03
+EMP0009,Gabrielle Davis,Retail Banking,Teller,Terminated,2023-01-02,2025-02-04
+EMP0010,Ryan Munoz,Operations,Reconciliation Officer,Active,2019-03-25,
+EMP0011,Monica Herrera,Operations,Operations Officer,Terminated,2022-12-27,2024-10-17
+EMP0012,Jamie Arnold,Finance,Finance Manager,Terminated,2025-03-20,2025-06-23
+EMP0013,Lisa Hensley,Retail Banking,Customer Service Officer,Active,2021-12-27,
+EMP0014,Michele Williams,Loans,Loan Officer,Terminated,2023-01-02,2026-09-24
+EMP0015,Dylan Miller,Treasury,Treasury Manager,Active,2022-11-23,
+EMP0016,Brian Ramirez,Finance,Finance Manager,Active,2026-08-12,
+EMP0017,Holly Wood,Finance,Financial Analyst,Active,2025-07-29,
+EMP0018,Derek Zuniga,Operations,Back Office Executive,Active,2020-07-29,
+EMP0019,Lisa Jackson,Treasury,Treasury Manager,Active,2026-06-03,
+EMP0020,Carla Gray,Retail Banking,Customer Service Officer,Active,2019-02-07,
+EMP0021,Margaret Hawkins DDS,IT,Database Administrator,Terminated,2019-06-27,2026-01-04
+EMP0022,Patty Perez,Finance,Finance Manager,Active,2021-02-15,
+EMP0023,Ethan Adams,IT,IT Manager,Terminated,2023-11-21,2024-06-10
+EMP0024,Tommy Walter,Loans,Loans Manager,Terminated,2024-10-14,2026-08-03
+EMP0025,Matthew Foster,IT,Network Engineer,Active,2023-03-22,
+EMP0026,Judy Baker,Loans,Loans Manager,Terminated,2024-04-11,2024-07-28
+EMP0027,Justin Baker,Retail Banking,Customer Service Officer,Terminated,2025-10-12,2026-07-15
+EMP0028,Stephanie Ross,Operations,Operations Officer,Active,2023-01-22,
+EMP0029,Zachary Hicks,IT,Network Engineer,Active,2021-07-24,
+EMP0030,Anthony Rodriguez,Retail Banking,Teller,Active,2026-05-22,
+EMP0031,Rebecca Henderson,Treasury,Fund Manager,Terminated,2019-12-29,2021-12-05
+EMP0032,James Ferrell,IT,Software Engineer,Active,2021-09-11,
+EMP0033,Tricia Valencia,Loans,Loans Manager,Active,2019-12-08,
+EMP0034,Nathan Maldonado,Treasury,Treasury Manager,Active,2020-06-16,
+EMP0035,Debra Davidson,Loans,Loans Manager,Active,2024-09-09,
+EMP0036,Jeffrey Chavez,Operations,Reconciliation Officer,Terminated,2024-03-22,2025-05-27
+EMP0037,Sherri Baker,Treasury,Treasury Manager,Terminated,2019-05-24,2025-12-01
+EMP0038,Cassandra Gaines,Retail Banking,Teller,Active,2024-03-11,
+EMP0039,Elizabeth Fowler,Operations,Back Office Executive,Active,2020-03-07,
+EMP0040,Brittany Farmer,Operations,Back Office Executive,Active,2021-09-18,
+EMP0041,Paula Moreno,Operations,Operations Manager,Active,2021-02-12,
+EMP0042,Fred Smith,Finance,Accountant,Active,2022-03-28,
+EMP0043,Sherry Decker,Finance,Finance Manager,Active,2023-08-28,
+EMP0044,Anthony Humphrey,IT,Software Engineer,Terminated,2021-07-10,2023-08-01
+EMP0045,Angelica Tucker,Retail Banking,Branch Manager,Terminated,2024-12-14,2025-09-25
+EMP0046,Philip Cannon,Retail Banking,Teller,Terminated,2025-10-26,2026-01-28
+EMP0047,John Pierce,Retail Banking,Relationship Manager,Active,2019-07-16,
+EMP0048,Shane Henderson,Treasury,Investment Officer,Active,2021-02-22,
+EMP0049,Joshua Blair,Finance,Controller,Active,2021-06-20,
+EMP0050,Eric Carney,IT,System Administrator,Terminated,2019-10-20,2024-10-18
+EMP0051,Jessica Holmes,Treasury,Investment Officer,Active,2023-05-09,
+EMP0052,Danny Morgan,Finance,Financial Analyst,Active,2026-04-18,
+EMP0053,Crystal Robinson,Finance,Financial Analyst,Active,2019-06-04,
+EMP0054,Mark Perez,Treasury,Treasury Analyst,Terminated,2021-07-13,2024-09-13
+EMP0055,Shannon Jones,IT,System Administrator,Terminated,2023-06-23,2026-03-26
+EMP0056,Michael Lewis,Loans,Loan Officer,Active,2023-09-18,
+EMP0057,Timothy Duncan,Operations,Operations Officer,Active,2019-04-24,
+EMP0058,Richard Aguirre,Operations,Operations Officer,Active,2019-10-16,
+EMP0059,Brent Jordan,Loans,Credit Analyst,Active,2023-04-20,
+EMP0060,John Daniel,Loans,Loan Processing Manager,Terminated,2019-05-27,2019-08-03
+EMP0061,Victoria Garcia,IT,Database Administrator,Terminated,2023-11-05,2025-12-17
+EMP0062,Gerald Hensley,Finance,Controller,Terminated,2020-06-24,2023-01-31
+EMP0063,Connor West,Retail Banking,Branch Manager,Terminated,2024-10-27,2025-11-12
+EMP0064,Donald Wright,Retail Banking,Teller,Active,2025-04-17,
+EMP0065,Jessica Callahan,Operations,Back Office Executive,Active,2019-05-19,
+EMP0066,Amber Kidd,Retail Banking,Customer Service Officer,Active,2019-07-06,
+EMP0067,Tracy House,Finance,Accountant,Terminated,2023-04-09,2026-08-17
+EMP0068,Carol Tucker,Loans,Loans Manager,Terminated,2025-05-30,2025-09-08
+EMP0069,James Brown,IT,IT Manager,Active,2025-04-15,
+EMP0070,William Baker,Treasury,Fund Manager,Active,2021-01-12,
+EMP0071,Jordan Henderson,Treasury,Treasury Manager,Active,2021-09-20,
+EMP0072,Whitney Peters,Finance,Finance Manager,Active,2023-11-14,
+EMP0073,Brittney Phillips,Retail Banking,Teller,Active,2023-11-19,
+EMP0074,Lauren Daniels,Operations,Operations Officer,Active,2019-07-26,
+EMP0075,Amy Silva,Operations,Reconciliation Officer,Active,2020-03-24,
+EMP0076,Sarah Moore,Retail Banking,Customer Service Officer,Terminated,2022-11-20,2025-07-04
+EMP0077,Angela Lopez,Operations,Reconciliation Officer,Active,2025-08-08,
+EMP0078,Megan Young,Finance,Financial Analyst,Active,2026-03-26,
+EMP0079,Steve Sanchez,Treasury,Treasury Analyst,Terminated,2020-04-01,2021-08-12
+EMP0080,Lisa Barnes,Finance,Accountant,Terminated,2021-10-18,2023-02-21
+EMP0081,Kelly Donovan,Finance,Finance Manager,Active,2021-01-09,
+EMP0082,Mike Allen,Treasury,Investment Officer,Active,2021-07-23,
+EMP0083,Michael Evans,Retail Banking,Teller,Active,2025-11-09,
+EMP0084,Paul Jones,Treasury,Treasury Analyst,Active,2018-10-13,
+EMP0085,Zachary Ferrell,Loans,Underwriter,Active,2020-07-21,
+EMP0086,Daniel Baker,Operations,Operations Manager,Terminated,2025-01-12,2025-05-29
+EMP0087,Shirley Suarez,Finance,Accountant,Terminated,2024-11-10,2026-01-22
+EMP0088,Christopher Bass,Operations,Back Office Executive,Terminated,2023-07-25,2025-06-15
+EMP0089,Lisa Archer,Treasury,Treasury Analyst,Terminated,2022-10-03,2024-04-26
+EMP0090,Aimee Montoya,Finance,Financial Analyst,Active,2022-09-16,
+EMP0091,Matthew Mcmillan,IT,Network Engineer,Active,2020-06-23,
+EMP0092,Brian Rodriguez,Loans,Credit Analyst,Active,2020-09-23,
+EMP0093,Denise Jacobs,Retail Banking,Customer Service Officer,Active,2022-06-20,
+EMP0094,Christina Walters,IT,IT Manager,Terminated,2021-07-11,2026-02-07
+EMP0095,John Whitehead,Finance,Financial Analyst,Active,2023-01-12,
+EMP0096,Anna Henderson,IT,System Administrator,Active,2020-12-24,
+EMP0097,Aaron Wise,IT,Database Administrator,Active,2022-03-02,
+EMP0098,Deborah Figueroa,Loans,Credit Analyst,Active,2019-01-03,
+EMP0099,Jessica Smith,IT,Database Administrator,Active,2021-11-13,
+EMP0100,Stephen Mckee,Treasury,Fund Manager,Active,2025-12-08,
+EMP0101,Sandra Aguilar,Finance,Finance Manager,Terminated,2019-01-20,2022-02-22
+EMP0102,Cameron Parker,Loans,Loans Manager,Terminated,2021-09-20,2025-03-24
+EMP0103,Rebecca Valencia,IT,Database Administrator,Active,2022-04-05,
+EMP0104,Christine Wright,Operations,Operations Officer,Active,2023-01-23,
+EMP0105,Richard Henson,Loans,Underwriter,Active,2019-03-29,
+EMP0106,Marc Moore,Retail Banking,Branch Manager,Active,2024-10-12,
+EMP0107,Sharon Cherry,Finance,Accountant,Active,2022-10-29,
+EMP0108,Sierra Johnson,Finance,Finance Manager,Active,2025-09-24,
+EMP0109,Evelyn Galvan,Retail Banking,Relationship Manager,Active,2024-06-06,
+EMP0110,Sharon Cochran,IT,Database Administrator,Active,2023-04-04,
+EMP0111,Richard Rodriguez,Operations,Back Office Executive,Active,2020-11-22,
+EMP0112,Shannon Walker,IT,IT Manager,Active,2020-09-10,
+EMP0113,Julia Torres,Treasury,Investment Officer,Active,2024-11-20,
+EMP0114,Crystal Johnson,Treasury,Fund Manager,Active,2021-02-05,
+EMP0115,Garrett Lin,Operations,Reconciliation Officer,Active,2023-12-16,
+EMP0116,Diana May,Finance,Accountant,Active,2024-06-22,
+EMP0117,William Herrera,Finance,Accountant,Terminated,2026-02-17,2026-08-27
+EMP0118,Ashley Waller,Finance,Finance Manager,Active,2019-10-16,
+EMP0119,Victor Baker,Loans,Underwriter,Active,2021-04-06,
+EMP0120,Jeffrey Chandler,Loans,Loan Officer,Terminated,2019-04-06,2024-10-02
+EMP0121,Larry Dixon,Operations,Operations Officer,Active,2023-11-07,
+EMP0122,Kenneth Scott,Finance,Accountant,Active,2026-07-21,
+EMP0123,April Frost,IT,System Administrator,Active,2020-05-25,
+EMP0124,Michelle Harmon,Retail Banking,Teller,Terminated,2023-07-06,2026-07-30
+EMP0125,Helen Jones,IT,Software Engineer,Terminated,2024-12-29,2025-07-01
+EMP0126,Erin Edwards,IT,System Administrator,Active,2023-12-15,
+EMP0127,Michelle Evans,Operations,Reconciliation Officer,Active,2023-09-15,
+EMP0128,Jason Powell,Finance,Controller,Active,2024-11-20,
+EMP0129,Cameron Fisher,Loans,Loan Processing Manager,Terminated,2023-10-16,2024-08-24
+EMP0130,Megan Orr,Finance,Finance Manager,Active,2024-08-03,
+EMP0131,Elizabeth Kelley,Loans,Underwriter,Terminated,2023-09-04,2025-06-10
+EMP0132,Dustin Jordan,Loans,Underwriter,Active,2022-07-05,
+EMP0133,Mary Marshall,Operations,Operations Officer,Terminated,2020-04-17,2024-10-01
+EMP0134,Daniel Kennedy,Finance,Accountant,Terminated,2021-02-21,2023-08-04
+EMP0135,Rebecca Jackson,Treasury,Investment Officer,Terminated,2023-05-29,2025-12-04
+EMP0136,Jose Schultz,IT,Network Engineer,Terminated,2026-07-17,2026-09-24
+EMP0137,Robert Potter,IT,IT Support Specialist,Active,2018-10-23,
+EMP0138,Courtney Gonzalez,Treasury,Investment Officer,Active,2023-06-11,
+EMP0139,David Alvarez,Finance,Accountant,Terminated,2024-03-20,2025-08-08
+EMP0140,Angel Perry,IT,Software Engineer,Active,2023-02-07,
+EMP0141,Cheyenne Horton,Finance,Controller,Active,2020-08-05,
+EMP0142,David Douglas Jr.,Loans,Loans Manager,Terminated,2024-09-24,2025-12-31
+EMP0143,Patricia Rodriguez,Operations,Operations Officer,Active,2019-09-07,
+EMP0144,Christopher Rubio,Loans,Loan Processing Manager,Terminated,2020-10-12,2025-03-12
+EMP0145,Amber Wright,Treasury,Treasury Manager,Active,2023-11-04,
+EMP0146,Joyce Solis,IT,Database Administrator,Terminated,2023-06-21,2024-02-03
+EMP0147,Victoria Larson,IT,Software Engineer,Terminated,2024-10-16,2025-12-08
+EMP0148,Stephanie Salazar,Loans,Loan Officer,Terminated,2026-01-19,2026-03-27
+EMP0149,Kathy Rivas,Loans,Credit Analyst,Active,2018-12-21,
+EMP0150,Stephanie Manning,Loans,Credit Analyst,Active,2024-01-20,
+EMP0151,David Wright,Operations,Back Office Executive,Active,2023-12-16,
+EMP0152,Pamela Boyd,Treasury,Treasury Manager,Active,2025-07-15,
+EMP0153,Denise Jones,Finance,Financial Analyst,Active,2020-07-30,
+EMP0154,Devon Flores,Retail Banking,Branch Manager,Active,2019-01-12,
+EMP0155,Brenda Hall,Operations,Operations Manager,Active,2023-03-11,
+EMP0156,Michelle Brown,Loans,Loan Officer,Active,2025-05-20,
+EMP0157,Joshua Perry,Finance,Accountant,Active,2019-11-20,
+EMP0158,Jason Stein,Treasury,Treasury Analyst,Active,2025-02-02,
+EMP0159,Melissa Gates,Treasury,Investment Officer,Active,2026-02-28,
+EMP0160,Jamie Smith,Operations,Reconciliation Officer,Active,2018-11-19,
+EMP0161,Paul Castaneda,IT,Software Engineer,Active,2023-08-09,
+EMP0162,Jennifer Adkins,Finance,Controller,Active,2020-06-16,
+EMP0163,Lindsey Walker,Finance,Finance Manager,Active,2025-08-25,
+EMP0164,Jeffrey Johnson,Operations,Operations Manager,Active,2023-12-16,
+EMP0165,Michael Powell,Finance,Finance Manager,Active,2022-05-11,
+EMP0166,John Anderson,Retail Banking,Relationship Manager,Terminated,2023-10-19,2025-04-06
+EMP0167,Alyssa Long,Operations,Operations Manager,Terminated,2022-07-07,2024-07-01
+EMP0168,Alyssa Day,Loans,Loan Processing Manager,Active,2021-02-13,
+EMP0169,Joel Williams,Treasury,Fund Manager,Active,2021-11-17,
+EMP0170,Daniel Murphy,Finance,Finance Manager,Terminated,2024-12-22,2025-09-03
+EMP0171,Jamie Walton,Retail Banking,Customer Service Officer,Active,2023-04-20,
+EMP0172,Darlene Miller,Loans,Loan Processing Manager,Active,2025-12-26,
+EMP0173,Joshua Cooke,IT,Software Engineer,Terminated,2019-10-15,2024-06-26
+EMP0174,Matthew Harrington,Finance,Accountant,Active,2022-03-06,
+EMP0175,Nicole Herring,Treasury,Investment Officer,Active,2024-12-13,
+EMP0176,Alex Hernandez,IT,IT Manager,Active,2024-11-30,
+EMP0177,Michael Elliott,Finance,Controller,Active,2021-10-12,
+EMP0178,Michael Wang,Loans,Loan Officer,Active,2020-11-25,
+EMP0179,Lawrence Adkins,Finance,Accountant,Terminated,2020-11-21,2026-06-26
+EMP0180,Robert Oconnell,Treasury,Fund Manager,Active,2019-11-14,
+EMP0181,Alexander Collins,Treasury,Treasury Manager,Terminated,2022-10-16,2023-01-12
+EMP0182,Tina Sanders,Finance,Accountant,Terminated,2021-10-26,2022-04-15
+EMP0183,Angela Vaughn,Operations,Reconciliation Officer,Active,2026-07-25,
+EMP0184,Ashley Barton,Finance,Controller,Active,2019-11-23,
+EMP0185,Lindsay Martinez,Operations,Reconciliation Officer,Active,2024-01-03,
+EMP0186,Dr. Hannah Patterson,Treasury,Treasury Manager,Terminated,2019-04-27,2024-11-02
+EMP0187,Jonathan Peterson,Retail Banking,Teller,Active,2023-03-28,
+EMP0188,Samantha Garcia,Operations,Operations Officer,Terminated,2020-06-11,2024-01-06
+EMP0189,Madison Poole,Retail Banking,Customer Service Officer,Active,2020-01-27,
+EMP0190,Jessica Gross,IT,Network Engineer,Active,2025-06-05,
+EMP0191,Debra Morton,Loans,Loans Manager,Active,2023-01-04,
+EMP0192,Karen Graham,IT,Database Administrator,Active,2025-05-05,
+EMP0193,Debra Christian,Treasury,Treasury Analyst,Active,2025-07-31,
+EMP0194,Angelica Keith,Retail Banking,Customer Service Officer,Terminated,2025-10-04,2026-01-13
+EMP0195,John Bishop,Loans,Credit Analyst,Active,2020-09-09,
+EMP0196,Allen Rosales,Loans,Loan Officer,Active,2023-04-29,
+EMP0197,Daniel Salinas,Operations,Operations Manager,Terminated,2022-01-03,2023-10-15
+EMP0198,Spencer Haynes,Finance,Finance Manager,Active,2026-08-17,
+EMP0199,Adam Vaughan,Retail Banking,Customer Service Officer,Active,2021-09-16,
+EMP0200,Nathan Freeman,Finance,Accountant,Terminated,2023-07-06,2024-12-07

@@ -1,0 +1,37 @@
+{
+  "description": "Segregation of Duties (SoD) rules. Each rule lists two role definitions that must never be held by the same employee at the same time, whether within a single system or across two different systems. 'system' values must match the review's system identifiers: core_banking, loan_system, database.",
+  "rules": [
+    {
+      "rule_id": "SOD-01",
+      "description": "An employee who can create a loan should not also be able to approve it.",
+      "conflicting_roles": [
+        { "system": "loan_system", "role": "Loan Creator" },
+        { "system": "loan_system", "role": "Loan Approver" }
+      ]
+    },
+    {
+      "rule_id": "SOD-02",
+      "description": "An employee who approves a loan should not also be able to disburse funds for it.",
+      "conflicting_roles": [
+        { "system": "loan_system", "role": "Loan Approver" },
+        { "system": "loan_system", "role": "Disbursement Officer" }
+      ]
+    },
+    {
+      "rule_id": "SOD-03",
+      "description": "An employee who opens accounts should not also be able to approve transactions on them.",
+      "conflicting_roles": [
+        { "system": "core_banking", "role": "Account Opener" },
+        { "system": "core_banking", "role": "Transaction Approver" }
+      ]
+    },
+    {
+      "rule_id": "SOD-04",
+      "description": "An employee who develops database changes should not also administer the database.",
+      "conflicting_roles": [
+        { "system": "database", "role": "Developer" },
+        { "system": "database", "role": "DBA" }
+      ]
+    }
+  ]
+}
